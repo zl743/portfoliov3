@@ -9,28 +9,28 @@ html {
   [data-aos] {
     opacity: 0;
   }
-  .pg-vertical{
-  .pg-pips {
-    @include media(maxTablet){
-      top: -20px;
-      right: 50%;
-      transform: translateX(50%) rotate(270deg);
-    }
-    ul {
-      li{
-        a{
-          background-color:$color-purple-d;
-          transition: all .1s linear;
-          &.active{
-            height: 9px;
-            width: 9px;
-            margin: -5px 0px 0px -5px;
+  .pg-vertical {
+    .pg-pips {
+      @include media(maxTablet) {
+        top: -20px;
+        right: 50%;
+        transform: translateX(50%) rotate(270deg);
+      }
+      ul {
+        li {
+          a {
+            background-color: $color-purple-d;
+            transition: all 0.1s linear;
+            &.active {
+              height: 9px;
+              width: 9px;
+              margin: -5px 0px 0px -5px;
+            }
           }
         }
       }
     }
   }
-}
   font-size: 10px;
   body {
     margin: 0;
@@ -71,8 +71,8 @@ html {
         position: relative;
         flex-direction: column;
         overflow: hidden;
-        &[data-anchor] > [class*="Container"]{
-          max-width:128rem;
+        &[data-anchor] > [class*="Container"] {
+          max-width: 128rem;
         }
         &[data-anchor="about"] {
           .aboutContainer {
@@ -189,7 +189,7 @@ html {
             .card {
               width: 25%;
               position: relative;
-              aspect-ratio:1;
+              aspect-ratio: 1;
               max-height: 32rem;
               //height:20rem;
               overflow: hidden;
@@ -262,7 +262,6 @@ html {
           }
         }
         &[data-anchor="resume"] {
-
           .jobContainer {
             padding: 3px;
             display: flex;
@@ -270,9 +269,9 @@ html {
             flex-direction: row;
             gap: 3rem;
             max-width: 100%;
-            overflow:visible;
+            overflow: visible;
             .job {
-              max-width:50rem;
+              max-width: 50rem;
               border: 1px solid black;
               border-radius: 25px;
               padding: 3rem 1.6rem;
@@ -281,15 +280,15 @@ html {
               justify-content: center;
               @include media(maxTablet) {
                 width: 100%;
-                max-width:unset;
+                max-width: unset;
               }
               align-items: center;
               &--title {
                 font-size: 2rem;
                 margin: 0;
-                text-align:center;
-                @include media(maxTablet){
-                  font-size:1.6rem;
+                text-align: center;
+                @include media(maxTablet) {
+                  font-size: 1.6rem;
                 }
               }
               &--dates {
@@ -324,25 +323,25 @@ html {
                   border-radius: 0.8rem;
                 }
               }
-              &--skillTitle, &--skillContainer{
-                display:none; //temporary
-
+              &--skillTitle,
+              &--skillContainer {
+                display: none; //temporary
               }
-              &--navSkill, &--navResp {
+              &--navSkill,
+              &--navResp {
                 width: calc(100% + 2px);
                 text-align: center;
                 font-size: 1.2rem;
                 text-transform: uppercase;
-                background-color: rgba($color-purple-d, .7);
+                background-color: rgba($color-purple-d, 0.7);
                 color: white;
                 padding: 0.5rem 0;
                 position: absolute;
                 bottom: -26px;
               }
               &--navResp {
-                bottom:-51px;
-                background-color: $color-purple-d
-
+                bottom: -51px;
+                background-color: $color-purple-d;
               }
               &--respContainer {
                 margin: 1.6rem 0 0;
@@ -360,59 +359,62 @@ html {
             }
           }
         }
-        &.pg-active{
+        &.pg-active {
           &[data-anchor="contact"] {
-            .contactContainer{
-              >div {
-                height:100%;
+            .contactContainer {
+              > div {
+                height: 100%;
               }
             }
           }
         }
         &[data-anchor="contact"] {
-          .contactContainer{
-            display:flex;
-            flex-direction:row;
-            flex-wrap:wrap;
-            width:100%;
-            height:100%;
-            max-width:unset;
-            align-items:center;
+          .contactContainer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 100%;
+            max-width: unset;
+            align-items: center;
             > div {
-              width:33.33%;
+              width: 33.33%;
               height: 0;
-              transition:height .1s linear;
+              transition: height 0.1s linear;
               display: flex;
               align-items: center;
               justify-content: center;
 
               svg {
                 width: 10vw;
-                height:10vw;
+                height: 10vw;
 
                 path {
                   fill: $color-purple-d;
-                  transition: all .1s linear;
+                  transition: all 0.1s linear;
                 }
-                &:hover{
+                &:hover {
                   path {
-                    fill:$color-blue-d;
+                    fill: $color-blue-d;
                   }
                 }
               }
               &.contact--github {
-                background-color:rgba($color-purple-d, .1);
+                background-color: rgba($color-purple-d, 0.1);
                 transform: skew(-30deg);
-                > * {transform:skew(30deg);}
+                > * {
+                  transform: skew(30deg);
+                }
               }
               &.contact--linkedin {
-                background-color:rgba($color-purple-d, .1);
+                background-color: rgba($color-purple-d, 0.1);
                 transform: skew(-30deg);
-                > * {transform:skew(30deg);}
-                svg{
+                > * {
+                  transform: skew(30deg);
+                }
+                svg {
                   path:last-of-type {
-                    fill:#D4C8E5;
-
+                    fill: #d4c8e5;
                   }
                 }
               }
